@@ -1,0 +1,289 @@
+body {
+    background-color: rgb(230, 228, 228);
+}
+
+header h3 {
+    font-size: 53px;
+    color: rgb(82, 78, 78);
+    text-align: center;
+}
+
+header p {
+    font-size: 25px;
+    color: rgb(123, 123, 123);
+    text-align: center;
+}
+
+.message {
+    display: flex;
+    width: 250px;
+    background-color: white;
+    margin: 5px;
+    align-items: flex-start;
+    margin: 25px 5px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.message-left {
+    margin-right: 30px;
+}
+
+.message-right {
+    margin-left: 30px;
+}
+
+.message img {
+    margin: 0 3px;
+    margin-top: 10px;
+    width: 25px;
+    height: 25px;
+    align-self: flex-start;
+}
+
+.article_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.p_right {
+    text-align: left;
+    width: 250px;
+}
+
+.p_left {
+    text-align: right;
+    width: 250px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(100, 184, 185);
+}
+
+.message h5 {
+    line-height: 0;
+}
+
+#message-last {
+    margin: 0;
+    width: 250px;
+}
+
+.message p {
+    font-size: 14px;
+    color: rgb(157, 157, 167);
+}
+
+.message h5 {
+    font-size: 16px;
+    color: rgb(111, 111, 111);
+}
+
+#message-last h5 {
+    text-align: center;
+    line-height: 20px;
+}
+
+#message-last p {
+    text-align: center;
+}
+
+@media screen and (min-width:550px) {
+    #message-last::before {
+        content: "\0025B2";
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        left: 49.5%;
+        top: 1285px;
+    }
+    #message_right-one::before {
+        content: "\0025C4";
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        left: 50%;
+        top: 340px;
+    }
+    #message_right-two::before {
+        content: "\0025C4";
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        left: 50%;
+        top: 680px;
+    }
+    #message_right-three::before {
+        content: "\0025C4";
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        left: 50%;
+        top: 980px;
+    }
+    #message_right-one::after {
+        content: "\0025BA";
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        left: 47%;
+        top: 483px
+    }
+    #message_right-two::after {
+        content: "\0025BA";
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        left: 47%;
+        top: 833px
+    }
+    #message_right-three::after {
+        content: "\0025BA";
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        left: 47%;
+        top: 1145px
+    }
+    .message-left {
+        text-align: right;
+    }
+}
+
+h4 {
+    text-transform: uppercase;
+    text-align: center;
+    background: rgb(157, 157, 167);
+    border: 0 solid gray;
+    width: 100px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 12px;
+    border-radius: 40px;
+}
+
+@media screen and (min-width:720px) {
+    #message_right-one::after {
+        content: "\0025BA";
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        left: 48%;
+        top: 483px
+    }
+    #message_right-two::after {
+        content: "\0025BA";
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        left: 48%;
+        top: 833px;
+    }
+    #message_right-three::after {
+        content: "\0025BA";
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        left: 48%;
+        top: 1145px
+    }
+}
+
+@media screen and (min-width:1180px) {
+    #message_right-one::after {
+        content: "\0025BA";
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        left: 48.5%;
+        top: 483px
+    }
+    #message_right-two::after {
+        content: "\0025BA";
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        left: 48.5%;
+        top: 833px
+    }
+    #message_right-three::after {
+        content: "\0025BA";
+        font-size: 20px;
+        color: white;
+        position: absolute;
+        left: 48.5%;
+        top: 1145px
+    }
+}
+
+.p_left,
+.p_right {
+    font-size: 12px;
+    color: rgb(157, 157, 167);
+}
+
+.lineposition {
+    border-left: 2px solid rgb(100, 184, 185);
+    height: 1025px;
+    position: absolute;
+    left: 50%;
+    top: 250px;
+    z-index: -1;
+}
+
+footer {
+    color: rgb(157, 157, 167);
+    text-align: center;
+}
+
+@media screen and (max-width:549px) {
+    article {
+        flex-direction: column;
+    }
+    .article_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .message {
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .lineposition {
+        position: absolute;
+        left: 50%;
+        top: 240px;
+        z-index: -1;
+        height: 1125px;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .lineposition {
+        position: absolute;
+        left: 50%;
+        top: 310px;
+        z-index: -1;
+        height: 1125px;
+    }
+}
+
+@media screen and (max-width:328px) {
+    .lineposition {
+        position: absolute;
+        left: 50%;
+        top: 360px;
+        z-index: -1;
+        height: 1125px;
+    }
+}
