@@ -2,7 +2,7 @@
   
 ####My works
 
-*[Aphrodite](Afrodita/index.html)
+*[Aphrodite](Afrodyta/index.html)
 *[Timeline](timeline/index.html)
 *[Calculator](calculator/index.html)
 *CV
