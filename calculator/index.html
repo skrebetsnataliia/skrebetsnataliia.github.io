@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container calc">
+        <div class="row ">
+            <div class="col-md-5 col-lg-8 d-md-flex d-md-block justify-content-md-between calc-row_first">
+                <h6>Calculator</h6>
+                <!-- <div>
+                    <button><img src="img/window-minimize-solid.svg" alt=""></button>
+                    <button><img src="img/window-maximize-regular.svg" alt=""></button>
+                    <button><img src="img/window-close-regular.svg" alt=""></button>
+
+                </div> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 col-lg-8 d-md-flex justify-content-md-start d-none d-md-block">
+                <!-- <div class="col-md-12 d-md-flex justify-content-md-between col-lg-5"> -->
+                <button><img src="img/sliders-h-solid.svg" alt=""></button>
+                <h6 class="align-self-end">Standard</h6>
+                <!-- <button><img src="img/redo-alt-solid.svg" alt=""></button> -->
+                <!-- </div> -->
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-lg-8 calc_item d-none d-lg-flex justify-content-lg-center">
+                <h6>History</h6>
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="col-md-5 col-lg-8  d-md-block d-lg-block">
+                <div class="col-md-12 col-lg-5">
+                    <form name="form">
+                        <input id='expr' class='form-control expes' name="expes" ; />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5  d-md-block d-lg-none calc_item btn-group">
+                <button id='MC' class='btn btn-outline-dark'>MC</button>
+                <button id='MR' class='btn btn-outline-dark'>MR</button>
+                <button id='MS' class='btn btn-outline-dark'>MS</button>
+                <button id='M-mul' class='btn btn-outline-dark'>M*</button>
+                <button id='M-' class='btn btn-outline-dark'>M-</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 d-md-block d-lg-none calc_item btn-group">
+                <button id='Clear' class='btn btn-outline-dark' onclick="back();">&lArr;</button>
+                <button id='CE' class='btn btn-outline-dark'>CE</button>
+                <button id='C' class='btn btn-outline-dark' onclick="clean();">C</button>
+                <button id='pm' class='btn btn-outline-dark'>&plusmn;</button>
+                <button id='sqr' class='btn btn-outline-dark'>&radic;</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 d-md-block d-lg-none calc_item btn-group">
+                <button id='b7' class='btn btn-light btn-outline-dark' onclick="insert(7);">7</button>
+                <button id='b8' class='btn btn-light btn-outline-dark' onclick="insert(8);">8</button>
+                <button id='b9' class='btn btn-light btn-outline-dark' onclick="insert(9);">9</button>
+                <button id='div' class='btn btn-outline-dark' onclick="insert('/');">/</button>
+                <button id='pc' class='btn btn-outline-dark' onclick="insert('%');">%</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 d-md-block d-lg-none calc_item btn-group">
+                <button id='b4' class='btn btn-light btn-outline-dark' onclick="insert(4);">4</button>
+                <button id='b5' class='btn btn-light btn-outline-dark' onclick="insert(5);">5</button>
+                <button id='b6' class='btn btn-light btn-outline-dark' onclick="insert(6);">6</button>
+                <button id='mul' class='btn btn-outline-dark' onclick="insert('*');">*</button>
+                <button id='onedivx' class='btn btn-outline-dark'>1/x</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 d-md-block d-lg-none calc_item btn-group">
+                <button id='b1' class='btn btn-light btn-outline-dark' onclick="insert(1);">1</button>
+                <button id='b2' class='btn btn-light btn-outline-dark' onclick="insert(2);">2</button>
+                <button id='b3' class='btn btn-light btn-outline-dark' onclick="insert(3);">3</button>
+                <button id='sub' class='btn btn-outline-dark' onclick="insert('-');">-</button>
+                <button id='plus' class='btn btn-outline-dark' onclick="insert('+');">+</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 d-md-block d-lg-none calc_item btn-group calc-row_last">
+                <button id='point' class='btn btn-outline-dark' onclick="insert(',');">,</button>
+                <button id='b0' class='btn btn-outline-dark' onclick="insert(0);">0</button>
+                <button id='equal' class='btn btn-outline-dark' onclick="equal();">=</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 d-none d-lg-block calc_item btn-group">
+                <button id='MC_lg' class='btn btn-outline-dark'>MC</button>
+                <button id='Clear_lg' class='btn btn-outline-dark' onclick="back();">&lArr;</button>
+                <button id='CE_lg' class='btn btn-outline-dark'>CE</button>
+                <button id='C_lg' class='btn btn-outline-dark' onclick="clean();">C</button>
+                <button id='pm_lg' class='btn btn-outline-dark'>&plusmn;</button>
+                <button id='sqr_lg' class='btn btn-outline-dark'>&radic;</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 d-none d-lg-block calc_item btn-group">
+                <button id='MR_lg' class='btn btn-outline-dark'>MR</button>
+                <button id='b7_lg' class='btn btn-light btn-outline-dark' onclick="insert(7);">7</button>
+                <button id='b8_lg' class='btn btn-light btn-outline-dark' onclick="insert(8);">8</button>
+                <button id='b9_lg' class='btn btn-light btn-outline-dark' onclick="insert(9);">9</button>
+                <button id='div_lg' class='btn btn-outline-dark' onclick="insert('/');">/</button>
+                <button id='pc_lg' class='btn btn-outline-dark' onclick="insert('%');">%</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 d-none d-lg-block calc_item btn-group">
+                <button id='MS_lg' class='btn btn-outline-dark'>MS</button>
+                <button id='b4_lg' class='btn btn-light btn-outline-dark' onclick="insert(4);">4</button>
+                <button id='b5_lg' class='btn btn-light btn-outline-dark' onclick="insert(5);">5</button>
+                <button id='b6_lg' class='btn btn-light btn-outline-dark' onclick="insert(6);">6</button>
+                <button id='mul_lg' class='btn btn-outline-dark' onclick="insert('*');">*</button>
+                <button id='onedivx_lg' class='btn btn-outline-dark'>1/x</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 d-none d-lg-block calc_item btn-group">
+                <button id='M-mul_lg' class='btn btn-outline-dark'>M*</button>
+                <button id='b1_lg' class='btn btn-light btn-outline-dark' onclick="insert(1);">1</button>
+                <button id='b2_lg' class='btn btn-light btn-outline-dark' onclick="insert(2);">2</button>
+                <button id='b3_lg' class='btn btn-light btn-outline-dark' onclick="insert(3);">3</button>
+                <button id='sub_lg' class='btn btn-outline-dark' onclick="insert('-');">-</button>
+                <button id='plus_lg' class='btn btn-outline-dark' onclick="insert('+');">+</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 d-none d-lg-block calc_item btn-group calc-row_last">
+                <button id='M-_lg' class='btn btn-outline-dark'>M-</button>
+                <button id='point_lg' class='btn btn-outline-dark' onclick="insert('.');">,</button>
+                <button id='b0_lg' class='btn btn-outline-dark' onclick="insert(0);">0</button>
+                <button id='equal_lg' class='btn btn-outline-dark' onclick="equal();">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

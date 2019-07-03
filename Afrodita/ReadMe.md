@@ -3,8 +3,9 @@
 [Blog](#)
 [Contact](#)
                 
-&copy;Enjoy the pleasure
 ####Free Templates
+
+&copy;Enjoy the pleasure
 
 #####07/06
 

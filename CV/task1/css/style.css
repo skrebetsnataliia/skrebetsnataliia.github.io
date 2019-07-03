@@ -1,0 +1,293 @@
+    .nav_img {
+        width: 35px;
+        border: 0 solid black;
+        border-radius: 50px;
+        background: white;
+        margin: 5px;
+        margin-left: 30px;
+    }
+    
+    .nav_link {
+        text-decoration: none;
+        color: white;
+        margin-left: 30px;
+        position: relative;
+        top: -15px;
+    }
+    
+    nav {
+        background-color: rgba(0, 0, 0, 0.795);
+    }
+    
+    section {
+        margin-left: 30px;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .fa-telegram-plane,
+    .fa-phone-alt,
+    .fa-desktop {
+        border: 0px solid gray;
+        color: black;
+        border-radius: 50px;
+        background: rgba(128, 128, 128, 0.3);
+        padding: 4px;
+    }
+    
+    article {
+        display: flex;
+    }
+    
+    .article_item-one h3 {
+        color: rgb(73, 72, 72);
+        font-size: 40px;
+    }
+    
+    .article_item-one p {
+        color: rgb(128, 128, 128);
+        font-size: 20px;
+    }
+    
+    .article_item-one button {
+        text-transform: uppercase;
+        font-size: 25px;
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    .article_item-one h4 {
+        font-size: 35px;
+        color: orangered;
+    }
+    
+    .article_item-one h5 {
+        font-size: 25px;
+    }
+    
+    .btn_profil-portfolio {
+        border: 1px solid orangered;
+        color: white;
+        background: orangered;
+        width: 200px;
+    }
+    
+    .btn_profil-contact {
+        border: 2px solid orangered;
+        color: orangered;
+        background: white;
+        width: 200px;
+    }
+    
+    img {
+        width: 250px;
+        margin: 20px 5px;
+    }
+    
+    .article_item-two h5 {
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+    
+    .article_item-two h6 {
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+    
+    .link_contact {
+        margin: 0 0 10px 0;
+    }
+    
+    .article_item-two p {
+        color: rgb(128, 128, 128);
+        font-size: 20px;
+    }
+    
+    .fa-star {
+        color: orange;
+    }
+    
+    @media screen and (max-width: 360px) {
+        nav {
+            display: flex;
+            flex-direction: column;
+        }
+        .nav_link {
+            margin: 10px 0 0 30px;
+        }
+        article {
+            flex-direction: column;
+        }
+        img {
+            width: 250px;
+            margin: 0 auto;
+        }
+        .article_item-one h5:first-of-type::after {
+            content: " 2003-2007";
+            color: rgb(128, 128, 128);
+        }
+        .article_item-one h5:nth-of-type(2)::after {
+            content: " 2007-2011";
+            color: rgb(128, 128, 128);
+        }
+        h5,
+        h4,
+        h6 {
+            line-height: 25px;
+        }
+        p,
+        h5,
+        h4,
+        h6 {
+            text-align: justify;
+        }
+        .article_item-two {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    @media screen and (max-width: 576px) and (min-width: 361px) {
+        nav {
+            display: flex;
+            flex-direction: column;
+        }
+        .nav_link {
+            margin: 10px 0 0 30px;
+        }
+        article {
+            flex-direction: column;
+        }
+        .article_item-one h5:first-of-type::after {
+            content: " 2003-2007";
+            color: rgb(128, 128, 128);
+            white-space: nowrap;
+        }
+        .article_item-one h5:nth-of-type(2)::after {
+            content: " 2007-2011";
+            color: rgb(128, 128, 128);
+            white-space: nowrap;
+        }
+        h5,
+        h4,
+        h6 {
+            line-height: 25px;
+        }
+        p,
+        h5,
+        h4,
+        h6 {
+            text-align: justify;
+        }
+        .article_item-two {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    @media screen and (max-width: 768px) and (min-width: 577px) {
+        article {
+            flex-direction: column;
+        }
+        h5,
+        h4,
+        h6 {
+            line-height: 25px;
+        }
+        p,
+        h5,
+        h4,
+        h6 {
+            text-align: justify;
+        }
+        .article_item-two {
+            display: flex;
+            flex-direction: column;
+        }
+        .article_item-one h5:first-of-type::after {
+            content: " 2003-2007";
+            color: rgb(128, 128, 128);
+            white-space: nowrap;
+            position: relative;
+            left: 46%;
+        }
+        .article_item-one h5:nth-of-type(2)::after {
+            content: " 2007-2011";
+            color: rgb(128, 128, 128);
+            white-space: nowrap;
+            position: relative;
+            left: 46%;
+        }
+    }
+    
+    @media screen and (max-width: 960px) and (min-width: 769px) {
+        article {
+            flex-direction: column;
+        }
+        h5,
+        h4,
+        h6 {
+            line-height: 25px;
+        }
+        p,
+        h5,
+        h4,
+        h6 {
+            text-align: justify;
+        }
+        .article_item-two {
+            display: flex;
+            flex-direction: column;
+        }
+        .section_item-profil {
+            display: flex;
+        }
+        .article_item-one h5:first-of-type::after {
+            content: " 2003-2007";
+            color: rgb(128, 128, 128);
+            white-space: nowrap;
+            position: relative;
+            left: 52%;
+        }
+        .article_item-one h5:nth-of-type(2)::after {
+            content: " 2007-2011";
+            color: rgb(128, 128, 128);
+            white-space: nowrap;
+            position: relative;
+            left: 52%;
+        }
+    }
+    
+    @media screen and (min-width: 961px) {
+        .article_item-one {
+            flex: 2;
+        }
+        .article_item-two {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .section_item-education {
+            display: flex;
+            flex-direction: column;
+        }
+        .section_item-profil {
+            display: flex;
+        }
+        .article_item-one h5:first-of-type::after {
+            content: " 2003-2007";
+            color: rgb(128, 128, 128);
+            white-space: nowrap;
+            position: relative;
+            left: 50%;
+        }
+        .article_item-one h5:nth-of-type(2)::after {
+            content: " 2007-2011";
+            color: rgb(128, 128, 128);
+            white-space: nowrap;
+            position: relative;
+            left: 50%;
+        }
+    }
