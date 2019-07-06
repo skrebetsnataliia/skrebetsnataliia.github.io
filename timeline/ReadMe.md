@@ -60,3 +60,21 @@ We have launced a new product. Thank you for all beta testers. Check it out live
 at Sanfransisco, United states
      
 CC0 License. Do what you want
+
+```javascript
+$(document).ready(function() {
+     [comment]:<>(Array for all id)
+
+
+    var arrayId = ["#message_right-one", "#message_left-one", "#message_right-two", "#message_left-two", "#message_right-three", "#message_left-three", "#message-last", "#cc"]; 
+
+    for (var key of arrayId){
+        $(key).on("mouseenter", function() {
+            $(this).addClass("message_select");
+        });
+        $(key).on("mouseleave", function() {
+            $(this).removeClass("message_select");
+        });
+    }
+})
+```

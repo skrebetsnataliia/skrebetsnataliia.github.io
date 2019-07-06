@@ -113,6 +113,7 @@ a {
         position: absolute;
         left: 50%;
         top: 340px;
+        z-index: -1;
     }
     #message_right-two::before {
         content: "\0025C4";
@@ -121,6 +122,7 @@ a {
         position: absolute;
         left: 50%;
         top: 680px;
+        z-index: -1;
     }
     #message_right-three::before {
         content: "\0025C4";
@@ -129,6 +131,7 @@ a {
         position: absolute;
         left: 50%;
         top: 980px;
+        z-index: -1;
     }
     #message_right-one::after {
         content: "\0025BA";
@@ -136,7 +139,8 @@ a {
         color: white;
         position: absolute;
         left: 47%;
-        top: 483px
+        top: 483px;
+        z-index: -1;
     }
     #message_right-two::after {
         content: "\0025BA";
@@ -144,7 +148,8 @@ a {
         color: white;
         position: absolute;
         left: 47%;
-        top: 833px
+        top: 833px;
+        z-index: -1;
     }
     #message_right-three::after {
         content: "\0025BA";
@@ -152,7 +157,8 @@ a {
         color: white;
         position: absolute;
         left: 47%;
-        top: 1145px
+        top: 1145px;
+        z-index: -1;
     }
     .message-left {
         text-align: right;
@@ -178,7 +184,8 @@ h4 {
         color: white;
         position: absolute;
         left: 48%;
-        top: 483px
+        top: 483px;
+        z-index: -1;
     }
     #message_right-two::after {
         content: "\0025BA";
@@ -187,6 +194,7 @@ h4 {
         position: absolute;
         left: 48%;
         top: 833px;
+        z-index: -1;
     }
     #message_right-three::after {
         content: "\0025BA";
@@ -194,7 +202,8 @@ h4 {
         color: white;
         position: absolute;
         left: 48%;
-        top: 1145px
+        top: 1145px;
+        z-index: -1;
     }
 }
 
@@ -205,7 +214,8 @@ h4 {
         color: white;
         position: absolute;
         left: 48.5%;
-        top: 483px
+        top: 483px;
+        z-index: -1;
     }
     #message_right-two::after {
         content: "\0025BA";
@@ -213,7 +223,8 @@ h4 {
         color: white;
         position: absolute;
         left: 48.5%;
-        top: 833px
+        top: 833px;
+        z-index: -1;
     }
     #message_right-three::after {
         content: "\0025BA";
@@ -221,7 +232,8 @@ h4 {
         color: white;
         position: absolute;
         left: 48.5%;
-        top: 1145px
+        top: 1145px;
+        z-index: -1;
     }
 }
 
@@ -286,4 +298,15 @@ footer {
         z-index: -1;
         height: 1125px;
     }
+}
+
+img[src="img/white.png"] {
+    z-index: -1;
+}
+
+.message_select {
+    width: 300px;
+    border: 1px solid black;
+    box-shadow: 10px #7a7878;
+    background: rgb(184, 245, 245);
 }
