@@ -106,7 +106,7 @@
     }
     
     .fa-star {
-        color: orange;
+        color: rgba(128, 128, 128, 0.849);
     }
     
     @media screen and (max-width: 360px) {
@@ -290,4 +290,8 @@
             position: relative;
             left: 50%;
         }
+    }
+    
+    .Bg_orange {
+        color: orange;
     }
