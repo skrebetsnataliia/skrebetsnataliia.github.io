@@ -310,3 +310,9 @@ img[src="img/white.png"] {
     box-shadow: 10px #7a7878;
     background: rgb(184, 245, 245);
 }
+
+.h4_hover {
+    color: black;
+    background: white;
+    border: 1px solid black;
+}

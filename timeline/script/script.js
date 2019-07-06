@@ -8,4 +8,10 @@ $(document).ready(function() {
             $(this).removeClass("message_select");
         });
     }
+    $("h4").on("mouseenter", function() {
+        $("h4").addClass("h4_hover");
+    });
+    $("h4").on("mouseleave", function() {
+        $("h4").removeClass("h4_hover");
+    });
 })
