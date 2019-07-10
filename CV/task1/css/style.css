@@ -210,15 +210,11 @@
             content: " 2003-2007";
             color: rgb(128, 128, 128);
             white-space: nowrap;
-            position: relative;
-            left: 46%;
         }
         .article_item-one h5:nth-of-type(2)::after {
             content: " 2007-2011";
             color: rgb(128, 128, 128);
             white-space: nowrap;
-            position: relative;
-            left: 46%;
         }
     }
     
