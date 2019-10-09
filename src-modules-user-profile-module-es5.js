@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"content\">\r\n  <h2>Edit Profile</h2>\r\n  <div>\r\n    <label for=\"email\" class=\"input-label\">Email address\r\n      <input type=\"text\" placeholder=\"Email\" name=\"email\">\r\n    </label>\r\n  </div>\r\n\r\n  <div class=\"flex-position\">\r\n    <div class=\"data\">\r\n      <label for=\"firstName\" class=\"input-label\">First name\r\n        <input type=\"text\" placeholder=\"Company\" name=\"firstName\">\r\n      </label>\r\n    </div>\r\n    <div class=\"data\">\r\n      <label for=\"secondName\" class=\"input-label\">Last name\r\n        <input type=\"text\" placeholder=\"Last name\" name=\"secondName\">\r\n      </label>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <label for=\"address\" class=\"input-label\">Address\r\n    <input type=\"text\" placeholder=\"Home address\" name=\"address\">\r\n  </label>\r\n\r\n  <div class=\"flex-position\">\r\n    <div class=\"address\">\r\n      <label for=\"city\" class=\"input-label\">City\r\n        <input type=\"text\" placeholder=\"City\" name=\"city\">\r\n      </label>\r\n    </div>\r\n    <div class=\"address\">\r\n      <label for=\"country\" class=\"input-label\">Country\r\n        <input type=\"text\" placeholder=\"Country\" name=\"country\">\r\n      </label>\r\n    </div>\r\n    <div class=\"address\">\r\n      <label for=\"zipCode\" class=\"input-label\">Postal code\r\n        <input type=\"text\" placeholder=\"ZIP code\" name=\"zipCode\">\r\n      </label>\r\n    </div>\r\n  </div>\r\n\r\n  <label for=\"description\" class=\"input-label\">About me\r\n    <input type=\"text\" placeholder=\"Here can be your description\" name=\"description\">\r\n  </label>\r\n  <div class=\"update-button\">\r\n    <button class=\"bold-text\">Update</button>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div *ngIf=\"!userInfoLoaded\" class=\"spinner-border\" style=\"width: 3rem; height: 3rem;\" role=\"status\">\r\n  <span class=\"sr-only\">Loading...</span>\r\n</div>\r\n\r\n<div *ngIf=\"userInfoLoaded\" class=\"content\">\r\n  <h2>Edit Profile</h2>\r\n  <form [formGroup]=\"updateForm\">\r\n  <div>\r\n    <label for=\"email\" class=\"input-label\">Email address\r\n      <input type=\"text\"\r\n      placeholder=\"Email\"\r\n      formControlName=\"email\">\r\n    </label>\r\n  </div>\r\n\r\n  <div class=\"flex-position\">\r\n    <div class=\"data\">\r\n      <label for=\"firstName\" class=\"input-label\">First name\r\n        <input type=\"text\"\r\n        placeholder=\"Company\"\r\n        formControlName=\"firstName\">\r\n      </label>\r\n    </div>\r\n    <div class=\"data\">\r\n      <label for=\"secondName\" class=\"input-label\">Last name\r\n        <input type=\"text\"\r\n        placeholder=\"Last name\"\r\n        formControlName=\"lastName\">\r\n      </label>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <label for=\"address\" class=\"input-label\">Address\r\n    <input type=\"text\"\r\n    placeholder=\"Home address\"\r\n    formControlName=\"address\">\r\n  </label>\r\n\r\n  <div class=\"flex-position\">\r\n    <div class=\"address\">\r\n      <label for=\"city\" class=\"input-label\">City\r\n        <input type=\"text\"\r\n        placeholder=\"City\"\r\n        formControlName=\"city\">\r\n      </label>\r\n    </div>\r\n    <div class=\"address\">\r\n      <label for=\"country\" class=\"input-label\">Country\r\n        <input type=\"text\"\r\n        placeholder=\"Country\"\r\n        formControlName=\"country\">\r\n      </label>\r\n    </div>\r\n    <div class=\"address\">\r\n      <label for=\"postalCode\" class=\"input-label\">Postal code\r\n        <input type=\"text\"\r\n        placeholder=\"ZIP code\"\r\n        formControlName=\"postalCode\">\r\n      </label>\r\n    </div>\r\n  </div>\r\n\r\n  <label for=\"description\" class=\"input-label\">About me\r\n    <input type=\"text\"\r\n    placeholder=\"Here can be your description\"\r\n    formControlName=\"aboutMe\">\r\n  </label>\r\n  <div class=\"update-button\">\r\n    <button class=\"bold-text\" (click)=\"updateUserInfo()\">Update</button>\r\n  </div>\r\n  </form>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -25,7 +25,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _pages_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/user-profile/user-profile.component */ "./src/pages/user-profile/user-profile.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _pages_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../pages/user-profile/user-profile.component */ "./src/pages/user-profile/user-profile.component.ts");
+
 
 
 
@@ -34,7 +36,7 @@ __webpack_require__.r(__webpack_exports__);
 var routes = [
     {
         path: '',
-        component: _pages_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_4__["UserProfileComponent"],
+        component: _pages_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_5__["UserProfileComponent"],
     },
 ];
 var UserProfileModule = /** @class */ (function () {
@@ -42,8 +44,8 @@ var UserProfileModule = /** @class */ (function () {
     }
     UserProfileModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            declarations: [_pages_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_4__["UserProfileComponent"]],
-            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forChild(routes)],
+            declarations: [_pages_user_profile_user_profile_component__WEBPACK_IMPORTED_MODULE_5__["UserProfileComponent"]],
+            imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forChild(routes), _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"]],
         })
     ], UserProfileModule);
     return UserProfileModule;
@@ -76,13 +78,62 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UserProfileComponent", function() { return UserProfileComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/user.service */ "./src/services/user.service.ts");
+
+
+
 
 
 var UserProfileComponent = /** @class */ (function () {
-    function UserProfileComponent() {
+    function UserProfileComponent(formBuilder, userService, toastr) {
+        this.formBuilder = formBuilder;
+        this.userService = userService;
+        this.toastr = toastr;
+        this.userInfoLoaded = false;
     }
     UserProfileComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var user = this.userService.getCurrentUserInfo().subscribe(function (user) {
+            _this.currentUser = user;
+            _this.updateForm = _this.formBuilder.group({
+                'firstName': [_this.currentUser.firstName, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+                'lastName': [_this.currentUser.lastName, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+                'email': [_this.currentUser.email, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
+                'address': [_this.currentUser.address],
+                'country': [_this.currentUser.country],
+                'city': [_this.currentUser.city],
+                'postalCode': [_this.currentUser.postalCode],
+                'aboutMe': [_this.currentUser.aboutMe]
+            });
+            _this.userInfoLoaded = true;
+        });
     };
+    UserProfileComponent.prototype.updateUserInfo = function () {
+        var _this = this;
+        var userInfo = {
+            email: this.updateForm.get('email').value,
+            firstName: this.updateForm.get('firstName').value,
+            lastName: this.updateForm.get('lastName').value,
+            address: this.updateForm.get('address').value,
+            country: this.updateForm.get('country').value,
+            city: this.updateForm.get('city').value,
+            postalCode: this.updateForm.get('postalCode').value,
+            aboutMe: this.updateForm.get('aboutMe').value,
+        };
+        console.log(userInfo);
+        this.userService.updateUser(userInfo).subscribe(function (res) {
+            _this.toastr.success('User profile is updated');
+        }, function (err) {
+            _this.toastr.error('Try update user profile one more time');
+        });
+    };
+    UserProfileComponent.ctorParameters = function () { return [
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+        { type: _services_user_service__WEBPACK_IMPORTED_MODULE_4__["UserService"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"] }
+    ]; };
     UserProfileComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-user-profile',

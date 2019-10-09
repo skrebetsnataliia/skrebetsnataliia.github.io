@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"src-modules-new-form-new-form-module":"src-modules-new-form-new-form-module","src-modules-user-profile-module":"src-modules-user-profile-module"}[chunkId]||chunkId) + "-es5.js"
+/******/ 		return __webpack_require__.p + "" + ({"src-modules-form-details-form-details-module":"src-modules-form-details-form-details-module","src-modules-new-form-new-form-module":"src-modules-new-form-new-form-module","src-modules-user-profile-module":"src-modules-user-profile-module"}[chunkId]||chunkId) + "-es5.js"
 /******/ 	}
 /******/
 /******/ 	// The require function

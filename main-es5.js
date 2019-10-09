@@ -52,7 +52,7 @@ module.exports = "<div class=\"add-form\">\r\n <button class=\"add-form_btn\" (c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main\">\r\n  <div class=\"main-image\">\r\n    <img src=\"../../../assets/business.jpg\" class=\"image\">\r\n  </div>\r\n  <div class=\"main-form\">\r\n    <div class=\"main-data\">\r\n      <h1 class=\"bold-text\">Log in</h1>\r\n      <h3 class=\"color-title\">If you don't have an account yet, please <a href=\"#\" class=\"color-blue\">register</a> first.</h3><br/><br/>\r\n        <form [formGroup]=\"myGroup\" (ngSubmit)=\"onSubmit()\">\r\n          <div>\r\n            <input type=\"text\" placeholder=\"Email\"\r\n            formControlName='email'\r\n            class=\"enter-form\"><br/>\r\n            <ng-container *ngIf=\"myGroup.controls.email.touched\">\r\n              <div class=\"text-danger\"\r\n              *ngIf=\"myGroup.controls.email.errors?.required\">\r\n                Email is required\r\n              </div>\r\n              <div class=\"text-danger\" *ngIf=\"myGroup.controls.email.errors?.email\">\r\n                Email is invalid\r\n              </div>\r\n            </ng-container>\r\n          <small\r\n           id=\"emailHelp\"\r\n           class=\"form-text text-muted\">\r\n            We'll never share your email with anyone else.\r\n          </small>\r\n            <br/>\r\n            <input type=\"{{show ? 'text' : 'password'}}\"\r\n             placeholder=\"Password\"\r\n             formControlName='password'\r\n             class=\"enter-form\"\r\n             #pass>\r\n             <br/>\r\n             <label for=\"showPassword\">\r\n                <input\r\n                (click)='ShowPassword()'\r\n                type=\"checkbox\"\r\n                class=\"form-check-input\"\r\n                id=\"showPassword\">Show password\r\n            </label><br/>\r\n\r\n             <ng-container *ngIf=\"myGroup.controls.password.touched\">\r\n              <div class=\"text-danger\"\r\n              *ngIf=\"myGroup.controls.password.errors?.required\">\r\n                Password is required\r\n              </div>\r\n            </ng-container>\r\n              <div class =\"forgot-password\">\r\n                <a href=\"#\">I forgot my password</a>\r\n              </div><br/>\r\n            <label for=\"remember\">\r\n                <input type=\"checkbox\" name = \"remember\">Remember me\r\n            </label><br/>\r\n            <button  [disabled]=\"myGroup.invalid\"  class=\"enter-form bold-text\">Log in</button>\r\n         </div>\r\n        </form>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"main\">\r\n  <div class=\"main-image\">\r\n    <img src=\"../../../assets/business.jpg\" class=\"image\">\r\n  </div>\r\n  <div class=\"main-form\">\r\n    <div class=\"main-data\">\r\n      <h1 class=\"bold-text\">Log in</h1>\r\n      <h3 class=\"color-title\">If you don't have an account yet, please <a href=\"#\" class=\"color-blue\">register</a> first.</h3><br/><br/>\r\n        <form [formGroup]=\"myGroup\" (ngSubmit)=\"onSubmit()\">\r\n          <div>\r\n            <input type=\"text\" placeholder=\"Email\"\r\n            formControlName='email'\r\n            class=\"enter-form\"><br/>\r\n            <ng-container *ngIf=\"myGroup.controls.email.touched\">\r\n              <div class=\"text-danger\"\r\n              *ngIf=\"myGroup.controls.email.errors?.required\">\r\n                Email is required\r\n              </div>\r\n              <div class=\"text-danger\" *ngIf=\"myGroup.controls.email.errors?.email\">\r\n                Email is invalid\r\n              </div>\r\n            </ng-container>\r\n          <small\r\n           id=\"emailHelp\"\r\n           class=\"form-text text-muted\">\r\n            We'll never share your email with anyone else.\r\n          </small>\r\n            <br/>\r\n            <input type=\"{{show ? 'text' : 'password'}}\"\r\n             placeholder=\"Password\"\r\n             formControlName='password'\r\n             class=\"enter-form\"\r\n             #pass>\r\n             <br/>\r\n             <label for=\"showPassword\">\r\n                <input\r\n                (click)='ShowPassword()'\r\n                type=\"checkbox\"\r\n                class=\"form-check-input\"\r\n                id=\"showPassword\">Show password\r\n            </label><br/>\r\n\r\n             <ng-container *ngIf=\"myGroup.controls.password.touched\">\r\n              <div class=\"text-danger\"\r\n              *ngIf=\"myGroup.controls.password.errors?.required\">\r\n                Password is required\r\n              </div>\r\n            </ng-container>\r\n              <!-- <div class =\"forgot-password\">\r\n                <a href=\"#\">I forgot my password</a>\r\n              </div><br/>\r\n            <label for=\"remember\">\r\n                <input type=\"checkbox\" name = \"remember\">Remember me\r\n            </label><br/> -->\r\n            <button  [disabled]=\"myGroup.invalid\"  class=\"enter-form bold-text\">Log in</button>\r\n         </div>\r\n        </form>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -63,7 +63,7 @@ module.exports = "<div class=\"main\">\r\n  <div class=\"main-image\">\r\n    <i
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main\">\r\n  <div class=\"main-image\">\r\n    <img src=\"../../../assets/register.jpg\" class=\"image\">\r\n  </div>\r\n  <div class=\"main-form\">\r\n    <div class=\"main-data\">\r\n      <h2 class=\"bold-text\">Register</h2>\r\n      <h5 class=\"color-title\">Please enter your name and e-mail here for the registration.</h5><br/><br/>\r\n        <div>\r\n          <form [formGroup]=\"registerForm\" (ngSubmit)=\"onSubmit()\">\r\n              <ng-container *ngIf=\"registerForm.controls.firstName.touched\">\r\n                  <div class=\"text-danger\" *ngIf=\"registerForm.controls.firstName.errors?.firstName\">\r\n                    First name is invalid\r\n                  </div>\r\n              </ng-container>\r\n          <input type=\"text\" placeholder=\"First name\"  formControlName=\"firstName\" class=\"enter-form\"><br/><br/>\r\n          <ng-container *ngIf=\"registerForm.controls.secondName.touched\">\r\n              <div class=\"text-danger\" *ngIf=\"registerForm.controls.secondName.errors?.secondName\">\r\n                Second name is invalid\r\n              </div>\r\n          </ng-container>\r\n          <input type=\"text\" placeholder=\"Second name\" formControlName=\"secondName\" class=\"enter-form\"><br/><br/>\r\n          <ng-container *ngIf=\"registerForm.controls.email.touched\">\r\n              <div class=\"text-danger\"\r\n              *ngIf=\"registerForm.controls.email.errors?.required\">\r\n                Email is required\r\n              </div>\r\n              <div class=\"text-danger\" *ngIf=\"registerForm.controls.email.errors?.email\">\r\n                Email is invalid\r\n              </div>\r\n            </ng-container>\r\n          <input type=\"text\" placeholder=\"E-Mail\" formControlName=\"email\" class=\"enter-form\"><br/><br/>\r\n          <ng-container *ngIf=\"registerForm.controls.password.touched\">\r\n              <div class=\"text-danger\"\r\n              *ngIf=\"registerForm.controls.password.errors?.required\">\r\n                Password is required\r\n              </div>\r\n              <div class=\"text-danger\" *ngIf=\"registerForm.controls.password.errors?.password\">\r\n                Password is invalid\r\n              </div>\r\n            </ng-container>\r\n          <input type=\"password\" placeholder=\"Your password\" formControlName=\"password\" class=\"enter-form\"><br/><br/>\r\n          <ng-container *ngIf=\"registerForm.controls.confirm.touched\">\r\n              <div class=\"text-danger\"\r\n              *ngIf=\"confirmPassword\">\r\n                Enter the correct password\r\n              </div>\r\n            </ng-container>\r\n          <input type=\"password\" placeholder=\"Confirm password\"  formControlName=\"confirm\" class=\"enter-form\"><br/><br/><br/>\r\n          <button  class=\"enter-form bold-text\" [disabled]=\"registerForm.invalid\"  >Register</button>\r\n        </form>\r\n       </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"main\">\r\n  <div class=\"main-image\">\r\n    <img src=\"../../../assets/register.jpg\" class=\"image\">\r\n  </div>\r\n  <div class=\"main-form\">\r\n    <div class=\"main-data\">\r\n      <h2 class=\"bold-text\">Register</h2>\r\n      <h5 class=\"color-title\">Please enter your name and e-mail here for the registration.</h5><br/><br/>\r\n        <div>\r\n          <form [formGroup]=\"registerForm\"\r\n          (ngSubmit)=\"onSubmit()\">\r\n              <ng-container *ngIf=\"registerForm.controls.firstName.touched\">\r\n                  <div class=\"text-danger\" *ngIf=\"registerForm.controls.firstName.errors?.firstName\">\r\n                    First name is invalid\r\n                  </div>\r\n              </ng-container>\r\n          <input type=\"text\"\r\n          placeholder=\"First name\"\r\n          formControlName=\"firstName\"\r\n          class=\"enter-form\"><br/><br/>\r\n          <ng-container *ngIf=\"registerForm.controls.lastName.touched\">\r\n              <div class=\"text-danger\" *ngIf=\"registerForm.controls.lastName.errors?.lastName\">\r\n                Last name is invalid\r\n              </div>\r\n          </ng-container>\r\n          <input type=\"text\"\r\n          placeholder=\"Last name\"\r\n          formControlName=\"lastName\"\r\n          class=\"enter-form\"><br/><br/>\r\n          <ng-container *ngIf=\"registerForm.controls.email.touched\">\r\n              <div class=\"text-danger\"\r\n              *ngIf=\"registerForm.controls.email.errors?.required\">\r\n                Email is required\r\n              </div>\r\n              <div class=\"text-danger\" *ngIf=\"registerForm.controls.email.errors?.email\">\r\n                Email is invalid\r\n              </div>\r\n            </ng-container>\r\n          <input type=\"text\"\r\n          placeholder=\"E-Mail\"\r\n          formControlName=\"email\"\r\n          class=\"enter-form\"><br/><br/>\r\n          <ng-container *ngIf=\"registerForm.controls.password.touched\">\r\n              <div class=\"text-danger\"\r\n              *ngIf=\"registerForm.controls.password.errors?.required\">\r\n                Password is required\r\n              </div>\r\n              <div class=\"text-danger\" *ngIf=\"registerForm.controls.password.errors?.password\">\r\n                Password is invalid\r\n              </div>\r\n            </ng-container>\r\n          <input type=\"password\"\r\n          placeholder=\"Your password\"\r\n          formControlName=\"password\"\r\n          class=\"enter-form\"><br/><br/>\r\n          <ng-container *ngIf=\"registerForm.controls.confirm.touched\">\r\n              <div class=\"text-danger\"\r\n              *ngIf=\"confirmPassword\">\r\n                Enter the correct password\r\n              </div>\r\n            </ng-container>\r\n          <input type=\"password\"\r\n          placeholder=\"Confirm password\"\r\n          formControlName=\"confirm\"\r\n          class=\"enter-form\"><br/><br/><br/>\r\n          <button  class=\"enter-form bold-text\"\r\n          [disabled]=\"registerForm.invalid\"\r\n          [style]=\"register\"> Register</button>\r\n        </form>\r\n       </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -107,7 +107,7 @@ module.exports = "<header>\r\n  <div class=\"header-form\">\r\n    <i class=\"fa
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-top-section></app-top-section>\r\n<div class=\"block-forms\">\r\n    <app-add-form  (onAddForm)=\"addNewForm($event)\"></app-add-form>\r\n  <div *ngFor='let item of forms'>\r\n      <app-form-item (chooseOption)=\"Option($event)\" [FromName]=\"item.name\" [date]=\"item.date\"></app-form-item>\r\n  </div>\r\n</div>\r\n\r\n"
+module.exports = "<app-top-section></app-top-section>\r\n<div class=\"block-forms\">\r\n    <app-add-form  (onAddForm)=\"addNewForm($event)\"></app-add-form>\r\n  <div *ngFor='let item of forms$|async'>\r\n      <app-form-item (chooseOption)=\"Option($event)\" (click)='formDetail(form)' [FromName]=\"item.name\" [date]=\"item.createdAt\"></app-form-item>\r\n  </div>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -140,7 +140,7 @@ module.exports = "<aside>\r\n  <nav>\r\n    <a routerLink=\"/\" href=\"#1\"><i c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row top\">\r\n  <div class=\"col-md-2 col-4 ml-2 d-flex-row\">\r\n        <h4>My Forms</h4>\r\n        <p>Total count:1</p>\r\n  </div>\r\n  <div class=\"col-md-3 col-5 mt-3\">\r\n    <input type=\"search\" class=\"form-control\" placeholder=\"Search in dashboard\">\r\n    <i class=\"fas fa-search\"></i>\r\n  </div>\r\n  <div class=\"col-md-1 mt-3 col-1\">\r\n    <button><img src=\"../../assets/triangle.png\" alt=\"\"></button>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"row top\">\r\n  <div class=\"col-md-2 col-4 ml-2 d-flex-row\">\r\n        <h4>My Forms</h4>\r\n        <!-- <p>Total count:1</p> -->\r\n  </div>\r\n  <div class=\"col-md-3 col-5 mt-3\">\r\n    <input type=\"search\" class=\"form-control\" placeholder=\"Search in dashboard\">\r\n    <i class=\"fas fa-search\"></i>\r\n  </div>\r\n  <div class=\"col-md-1 mt-3 col-1\">\r\n    <button><img src=\"../../assets/triangle.png\" alt=\"\"></button>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -180,6 +180,12 @@ var routes = [
         component: src_pages_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__["DashboardComponent"],
         children: [
             {
+                path: 'form-details',
+                loadChildren: function () {
+                    return __webpack_require__.e(/*! import() | src-modules-form-details-form-details-module */ "src-modules-form-details-form-details-module").then(__webpack_require__.bind(null, /*! src/modules/form-details/form-details.module */ "./src/modules/form-details/form-details.module.ts")).then(function (m) { return m.FormDetailsModule; });
+                },
+            },
+            {
                 path: 'products',
                 loadChildren: function () {
                     return Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! src/modules/products/products.module */ "./src/modules/products/products.module.ts")).then(function (m) { return m.ProductsModule; });
@@ -208,7 +214,7 @@ var routes = [
                 loadChildren: function () {
                     return Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! src/modules/auth/auth.module */ "./src/modules/auth/auth.module.ts")).then(function (m) { return m.AuthModule; });
                 },
-            },
+            }
         ],
     },
 ];
@@ -294,6 +300,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_modules_forms_forms_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/modules/forms/forms.module */ "./src/modules/forms/forms.module.ts");
 /* harmony import */ var src_services_token_interceptor_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/services/token-interceptor.service */ "./src/services/token-interceptor.service.ts");
 /* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ngrx/store-devtools */ "./node_modules/@ngrx/store-devtools/fesm5/store-devtools.js");
+/* harmony import */ var src_store_reducers_form_reducer__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! src/store/reducers/form.reducer */ "./src/store/reducers/form.reducer.ts");
+/* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ngrx/effects */ "./node_modules/@ngrx/effects/fesm5/effects.js");
+/* harmony import */ var src_store_effects_form_effects__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! src/store/effects/form.effects */ "./src/store/effects/form.effects.ts");
+
+
+
+
+
+
+
 
 
 
@@ -323,9 +343,16 @@ var AppModule = /** @class */ (function () {
                 src_modules_forms_forms_module__WEBPACK_IMPORTED_MODULE_10__["FormsModuleM"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
+                ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_12__["ModalModule"].forRoot(),
+                ngx_toastr__WEBPACK_IMPORTED_MODULE_13__["ToastrModule"].forRoot(),
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_14__["BrowserAnimationsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_12__["ModalModule"].forRoot()
+                //StoreModule.forRoot(formReducer),
+                _ngrx_store__WEBPACK_IMPORTED_MODULE_15__["StoreModule"].forFeature('forms', src_store_reducers_form_reducer__WEBPACK_IMPORTED_MODULE_17__["formReducer"]),
+                _ngrx_effects__WEBPACK_IMPORTED_MODULE_18__["EffectsModule"].forFeature([src_store_effects_form_effects__WEBPACK_IMPORTED_MODULE_19__["FormsEffect"]]),
+                _ngrx_store__WEBPACK_IMPORTED_MODULE_15__["StoreModule"].forRoot({}),
+                _ngrx_effects__WEBPACK_IMPORTED_MODULE_18__["EffectsModule"].forRoot([src_store_effects_form_effects__WEBPACK_IMPORTED_MODULE_19__["FormsEffect"]]),
+                _ngrx_store_devtools__WEBPACK_IMPORTED_MODULE_16__["StoreDevtoolsModule"].instrument(),
             ],
             providers: [src_services_token_interceptor_service__WEBPACK_IMPORTED_MODULE_11__["TokenInterceptorService"], {
                     provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HTTP_INTERCEPTORS"],
@@ -357,7 +384,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
-    LOGIN_URL: 'http://localhost:3000/auth'
+    LOGIN_URL: 'http://localhost:3000/auth',
+    FORMS_URL: 'http://localhost:3000'
 };
 /*
  * For easier debugging in development mode, you can import the following file
@@ -706,7 +734,7 @@ var TopSectionModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".add-form_btn {\n  color: gray;\n  background: white;\n  width: 80px;\n  height: 80px;\n  border: none;\n  border-radius: 40px;\n  text-align: center;\n}\n\n.add-form {\n  background-image: url('new.jpg');\n  background-repeat: no-repeat;\n  width: 310px;\n  height: 230px;\n  border-radius: 10px;\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n          justify-content: center;\n  margin: 25px 15px 15px;\n  z-index: -1;\n}\n\n.add-form_btn:hover {\n  padding-top: 23px;\n}\n\n.add-form_btn:hover::after {\n  content: \"Add form\";\n  display: -webkit-box;\n  display: flex;\n  background: gray;\n  color: white;\n  border: 5px;\n  margin-top: 25px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9wYWdlcy9hZGQtZm9ybS9EOlxcQW5ndWxhclByb2plY3Qvc3JjXFxwYWdlc1xcYWRkLWZvcm1cXGFkZC1mb3JtLmNvbXBvbmVudC5zY3NzIiwic3JjL3BhZ2VzL2FkZC1mb3JtL2FkZC1mb3JtLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBQTtFQUNBLGlCQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSxZQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtBQ0NGOztBRENBO0VBQ0UsZ0NBQUE7RUFDQSw0QkFBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSx5QkFBQTtVQUFBLG1CQUFBO0VBQ0Esd0JBQUE7VUFBQSx1QkFBQTtFQUNBLHNCQUFBO0VBQ0EsV0FBQTtBQ0VGOztBREFDO0VBQ0UsaUJBQUE7QUNHSDs7QURGRztFQUNDLG1CQUFBO0VBQ0Esb0JBQUE7RUFBQSxhQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0FDSUoiLCJmaWxlIjoic3JjL3BhZ2VzL2FkZC1mb3JtL2FkZC1mb3JtLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmFkZC1mb3JtX2J0bntcclxuICBjb2xvcjpncmF5O1xyXG4gIGJhY2tncm91bmQ6IHdoaXRlO1xyXG4gIHdpZHRoOiA4MHB4O1xyXG4gIGhlaWdodDogODBweDtcclxuICBib3JkZXI6IG5vbmU7XHJcbiAgYm9yZGVyLXJhZGl1czogNDBweDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuLmFkZC1mb3Jte1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9hc3NldHMvbmV3LmpwZyk7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICB3aWR0aDogMzEwcHg7XHJcbiAgaGVpZ2h0OiAyMzBweDtcclxuICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICBtYXJnaW46IDI1cHggMTVweCAxNXB4O1xyXG4gIHotaW5kZXg6IC0xO1xyXG59XHJcbiAuYWRkLWZvcm1fYnRuOmhvdmVye1xyXG4gICBwYWRkaW5nLXRvcDogMjNweDtcclxuICAgJjo6YWZ0ZXJ7XHJcbiAgICBjb250ZW50OiBcIkFkZCBmb3JtXCI7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgYmFja2dyb3VuZDogZ3JheTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGJvcmRlcjogNXB4O1xyXG4gICAgbWFyZ2luLXRvcDogMjVweDtcclxuICAgIH1cclxuIH1cclxuIiwiLmFkZC1mb3JtX2J0biB7XG4gIGNvbG9yOiBncmF5O1xuICBiYWNrZ3JvdW5kOiB3aGl0ZTtcbiAgd2lkdGg6IDgwcHg7XG4gIGhlaWdodDogODBweDtcbiAgYm9yZGVyOiBub25lO1xuICBib3JkZXItcmFkaXVzOiA0MHB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5hZGQtZm9ybSB7XG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9hc3NldHMvbmV3LmpwZyk7XG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gIHdpZHRoOiAzMTBweDtcbiAgaGVpZ2h0OiAyMzBweDtcbiAgYm9yZGVyLXJhZGl1czogMTBweDtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIG1hcmdpbjogMjVweCAxNXB4IDE1cHg7XG4gIHotaW5kZXg6IC0xO1xufVxuXG4uYWRkLWZvcm1fYnRuOmhvdmVyIHtcbiAgcGFkZGluZy10b3A6IDIzcHg7XG59XG4uYWRkLWZvcm1fYnRuOmhvdmVyOjphZnRlciB7XG4gIGNvbnRlbnQ6IFwiQWRkIGZvcm1cIjtcbiAgZGlzcGxheTogZmxleDtcbiAgYmFja2dyb3VuZDogZ3JheTtcbiAgY29sb3I6IHdoaXRlO1xuICBib3JkZXI6IDVweDtcbiAgbWFyZ2luLXRvcDogMjVweDtcbn0iXX0= */"
+module.exports = ".add-form_btn {\n  color: gray;\n  background: white;\n  width: 80px;\n  height: 80px;\n  border: none;\n  border-radius: 40px;\n  text-align: center;\n}\n\n.add-form {\n  background-image: url('new.jpg');\n  background-repeat: no-repeat;\n  width: 310px;\n  height: 230px;\n  border-radius: 10px;\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n          justify-content: center;\n  margin: 25px 15px 15px;\n  z-index: -1;\n}\n\n.add-form_btn:hover {\n  padding-top: 23px;\n}\n\n.add-form_btn:hover::after {\n  content: \"Add form\";\n  display: -webkit-box;\n  display: flex;\n  background: gray;\n  color: white;\n  border: 5px;\n  margin-top: 25px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9wYWdlcy9hZGQtZm9ybS9EOlxcQW5ndWxhclByb2plY3Qvc3JjXFxwYWdlc1xcYWRkLWZvcm1cXGFkZC1mb3JtLmNvbXBvbmVudC5zY3NzIiwic3JjL3BhZ2VzL2FkZC1mb3JtL2FkZC1mb3JtLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBQTtFQUNBLGlCQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSxZQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtBQ0NGOztBRENBO0VBQ0UsZ0NBQUE7RUFDQSw0QkFBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSxvQkFBQTtFQUFBLGFBQUE7RUFDQSx5QkFBQTtVQUFBLG1CQUFBO0VBQ0Esd0JBQUE7VUFBQSx1QkFBQTtFQUNBLHNCQUFBO0VBQ0EsV0FBQTtBQ0VGOztBREFDO0VBQ0UsaUJBQUE7QUNHSDs7QURGRztFQUNDLG1CQUFBO0VBQ0Esb0JBQUE7RUFBQSxhQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0FDSUoiLCJmaWxlIjoic3JjL3BhZ2VzL2FkZC1mb3JtL2FkZC1mb3JtLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmFkZC1mb3JtX2J0bntcclxuICBjb2xvcjpncmF5O1xyXG4gIGJhY2tncm91bmQ6IHdoaXRlO1xyXG4gIHdpZHRoOiA4MHB4O1xyXG4gIGhlaWdodDogODBweDtcclxuICBib3JkZXI6IG5vbmU7XHJcbiAgYm9yZGVyLXJhZGl1czogNDBweDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuLmFkZC1mb3Jte1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi8uLi9hc3NldHMvbmV3LmpwZyk7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICB3aWR0aDogMzEwcHg7XHJcbiAgaGVpZ2h0OiAyMzBweDtcclxuICBib3JkZXItcmFkaXVzOiAxMHB4O1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICBtYXJnaW46IDI1cHggMTVweCAxNXB4O1xyXG4gIHotaW5kZXg6IC0xO1xyXG59XHJcbiAuYWRkLWZvcm1fYnRuOmhvdmVye1xyXG4gICBwYWRkaW5nLXRvcDogMjNweDtcclxuICAgJjo6YWZ0ZXJ7XHJcbiAgICBjb250ZW50OiBcIkFkZCBmb3JtXCI7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgYmFja2dyb3VuZDogZ3JheTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGJvcmRlcjogNXB4O1xyXG4gICAgbWFyZ2luLXRvcDogMjVweDtcclxuICAgIH1cclxuIH1cclxuXHJcbiIsIi5hZGQtZm9ybV9idG4ge1xuICBjb2xvcjogZ3JheTtcbiAgYmFja2dyb3VuZDogd2hpdGU7XG4gIHdpZHRoOiA4MHB4O1xuICBoZWlnaHQ6IDgwcHg7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXJhZGl1czogNDBweDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uYWRkLWZvcm0ge1xuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoLi4vLi4vYXNzZXRzL25ldy5qcGcpO1xuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICB3aWR0aDogMzEwcHg7XG4gIGhlaWdodDogMjMwcHg7XG4gIGJvcmRlci1yYWRpdXM6IDEwcHg7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBtYXJnaW46IDI1cHggMTVweCAxNXB4O1xuICB6LWluZGV4OiAtMTtcbn1cblxuLmFkZC1mb3JtX2J0bjpob3ZlciB7XG4gIHBhZGRpbmctdG9wOiAyM3B4O1xufVxuLmFkZC1mb3JtX2J0bjpob3Zlcjo6YWZ0ZXIge1xuICBjb250ZW50OiBcIkFkZCBmb3JtXCI7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGJhY2tncm91bmQ6IGdyYXk7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyOiA1cHg7XG4gIG1hcmdpbi10b3A6IDI1cHg7XG59Il19 */"
 
 /***/ }),
 
@@ -783,15 +811,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var src_services_user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/services/user.service */ "./src/services/user.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+
 
 
 
 
 
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent(userServ, _rout) {
+    function LoginComponent(userServ, router, toastr) {
         this.userServ = userServ;
-        this._rout = _rout;
+        this.router = router;
+        this.toastr = toastr;
         this.type = 'password';
         this.show = false;
         this.myGroup = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
@@ -806,10 +837,12 @@ var LoginComponent = /** @class */ (function () {
         var value = this.myGroup.value;
         this.userServ.logIn({ email: value.email,
             password: value.password }).subscribe(function (res) {
-            localStorage.setItem("accessToken", res.accessToken);
-            _this._rout.navigate(['/my-forms']);
+            localStorage.setItem('accessToken', res.accessToken);
+            _this.router.navigate(['/my-forms']);
+            _this.toastr.success('Welcome!');
         }, function (err) {
             _this.error = err.message;
+            _this.toastr.error("" + _this.error);
         });
     };
     LoginComponent.prototype.ShowPassword = function () {
@@ -817,13 +850,15 @@ var LoginComponent = /** @class */ (function () {
     };
     LoginComponent.ctorParameters = function () { return [
         { type: src_services_user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"] },
-        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"] }
     ]; };
     LoginComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-login',
             template: __webpack_require__(/*! raw-loader!./login.component.html */ "./node_modules/raw-loader/index.js!./src/pages/auth/login/login.component.html"),
-            providers: [src_services_user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"]],
+            providers: [src_services_user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"]] // TODO: Why we inject service here?
+            ,
             styles: [__webpack_require__(/*! ./login.component.scss */ "./src/pages/auth/login/login.component.scss")]
         })
     ], LoginComponent);
@@ -858,25 +893,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/user.service */ "./src/services/user.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+
+
+
 
 
 
 var RegisterComponent = /** @class */ (function () {
-    function RegisterComponent(fb) {
+    function RegisterComponent(fb, userService, router, toastr) {
         this.fb = fb;
+        this.userService = userService;
+        this.router = router;
+        this.toastr = toastr;
     }
     RegisterComponent.prototype.ngOnInit = function () {
         this.registerForm = this.fb.group({
             firstName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-            secondName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            lastName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required])],
             password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].compose([_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].minLength(6)])],
             confirm: ['']
         }, { validator: this.checkPasswords });
     };
     RegisterComponent.prototype.onSubmit = function () {
-        console.log(this.registerForm);
-        //send data  via service
+        var _this = this;
+        var userInfo = {
+            firstName: this.registerForm.get('firstName').value,
+            lastName: this.registerForm.get('lastName').value,
+            email: this.registerForm.get('email').value,
+            password: this.registerForm.get('password').value,
+        };
+        this.userService.registerUser(userInfo).subscribe(function (res) {
+            _this.toastr.success('Welcome to creator forms!');
+            _this.router.navigate(['/login']);
+        }, function (err) {
+            _this.toastr.error('Try register one more time');
+        });
     };
     RegisterComponent.prototype.checkPasswords = function (registerForm) {
         var password = registerForm.get('password').value;
@@ -884,7 +939,10 @@ var RegisterComponent = /** @class */ (function () {
         return password === confirmPassword ? null : { notSame: true };
     };
     RegisterComponent.ctorParameters = function () { return [
-        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] }
+        { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
+        { type: _services_user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+        { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrService"] }
     ]; };
     RegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1084,30 +1142,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_form_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/form.service */ "./src/services/form.service.ts");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var _store_actions_myform_action__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../store/actions/myform.action */ "./src/store/actions/myform.action.ts");
+/* harmony import */ var _store_reducers_form_reducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../store/reducers/form.reducer */ "./src/store/reducers/form.reducer.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+
 
 
 
 var MyformComponent = /** @class */ (function () {
-    function MyformComponent(formSrvc) {
-        this.formSrvc = formSrvc;
-        this.forms = [];
-        this.formName = 'Standard name';
-        this.date = new Date();
+    function MyformComponent(formService, store, router) {
+        this.formService = formService;
+        this.store = store;
+        this.router = router;
     }
     MyformComponent.prototype.ngOnInit = function () {
-        this.forms = this.formSrvc.forms;
+        this.store.dispatch(new _store_actions_myform_action__WEBPACK_IMPORTED_MODULE_4__["LoadForms"]());
+        this.forms$ = this.store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["select"])(_store_reducers_form_reducer__WEBPACK_IMPORTED_MODULE_5__["getForms"]));
+    };
+    MyformComponent.prototype.formDetail = function (form) {
+        this.router.navigate(['form-details']);
     };
     MyformComponent.prototype.addNewForm = function () {
-        console.log("method, which add forms, works");
-        this.formName = prompt('Enter name of form');
-        if (this.formName !== null) {
-            this.forms.push({ name: this.formName, date: this.date });
-        }
     };
     MyformComponent.prototype.Option = function (value) {
         switch (value) {
             case 1:
-                //to do
+                // let form:IForm;
+                // this.router.navigate(['form-details']);
+                //  console.log(this.store.dispatch(new formActions.LoadForm(form.name)));
+                //  this.store.dispatch(new formActions.LoadForm(form.name));
                 break;
             case 2:
                 //to do
@@ -1124,7 +1191,9 @@ var MyformComponent = /** @class */ (function () {
         }
     };
     MyformComponent.ctorParameters = function () { return [
-        { type: _services_form_service__WEBPACK_IMPORTED_MODULE_2__["FormService"] }
+        { type: _services_form_service__WEBPACK_IMPORTED_MODULE_2__["FormService"] },
+        { type: _ngrx_store__WEBPACK_IMPORTED_MODULE_3__["Store"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] }
     ]; };
     MyformComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1285,25 +1354,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormService", function() { return FormService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
+
 
 
 var FormService = /** @class */ (function () {
-    function FormService() {
-        this.forms = [
-            {
-                name: 'First form',
-                date: new Date(2011, 0, 1, 0, 0, 0, 0)
-            },
-            {
-                name: 'Second form',
-                date: new Date(2017, 7, 5, 0, 0, 0, 0)
-            },
-            {
-                name: 'Third form',
-                date: new Date(2019, 8, 8, 0, 0, 0, 0)
-            }
-        ];
+    function FormService(http) {
+        this.http = http;
+        this.API_URL = src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].FORMS_URL;
     }
+    FormService.prototype.getForm = function () {
+        return this.http.get(this.API_URL + "/forms");
+    };
+    FormService.prototype.getFormById = function (payload) {
+        return this.http.get(this.API_URL + "/forms/" + payload);
+    };
+    FormService.prototype.createForm = function (form) {
+        return this.http.post(this.API_URL + "/forms", form);
+    };
+    FormService.prototype.updateForm = function (form) {
+        return this.http.put(this.API_URL + "/forms/" + form.id, form);
+    };
+    FormService.prototype.deleteForm = function (payload) {
+        return this.http.delete(this.API_URL + "/forms/" + payload);
+    };
+    FormService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+    ]; };
     FormService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
@@ -1392,16 +1471,26 @@ var UserService = /** @class */ (function () {
     function UserService(http) {
         this.http = http;
         this.API_URL = src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].LOGIN_URL;
+        this.API_URL_MAIN = src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].FORMS_URL;
     }
     ;
     UserService.prototype.logIn = function (user) {
-        return this.http.post(this.API_URL + "/signIn", user);
+        return this.http.post(this.API_URL + "/signin", user);
     };
     UserService.prototype.getToken = function () {
         return localStorage.getItem('accessToken');
     };
     UserService.prototype.logOut = function () {
         return localStorage.clear();
+    };
+    UserService.prototype.registerUser = function (user) {
+        return this.http.post(this.API_URL + "/signup", user);
+    };
+    UserService.prototype.updateUser = function (user) {
+        return this.http.put(this.API_URL_MAIN + "/account", user);
+    };
+    UserService.prototype.getCurrentUserInfo = function () {
+        return this.http.get(this.API_URL_MAIN + "/account");
     };
     UserService.ctorParameters = function () { return [
         { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
@@ -1414,6 +1503,390 @@ var UserService = /** @class */ (function () {
     return UserService;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/store/actions/myform.action.ts":
+/*!********************************************!*\
+  !*** ./src/store/actions/myform.action.ts ***!
+  \********************************************/
+/*! exports provided: FormActionType, LoadForms, LoadFormsSuccess, LoadFormsFail, LoadForm, LoadFormSuccess, LoadFormFail, CreateForm, CreateFormSuccess, CreateFormFail, UpdateForm, UpdateFormSuccess, UpdateFormFail, DeleteForm, DeleteFormSuccess, DeleteFormFail */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormActionType", function() { return FormActionType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoadForms", function() { return LoadForms; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoadFormsSuccess", function() { return LoadFormsSuccess; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoadFormsFail", function() { return LoadFormsFail; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoadForm", function() { return LoadForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoadFormSuccess", function() { return LoadFormSuccess; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoadFormFail", function() { return LoadFormFail; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateForm", function() { return CreateForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateFormSuccess", function() { return CreateFormSuccess; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateFormFail", function() { return CreateFormFail; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateForm", function() { return UpdateForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateFormSuccess", function() { return UpdateFormSuccess; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateFormFail", function() { return UpdateFormFail; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeleteForm", function() { return DeleteForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeleteFormSuccess", function() { return DeleteFormSuccess; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeleteFormFail", function() { return DeleteFormFail; });
+var FormActionType;
+(function (FormActionType) {
+    FormActionType["LOAD_FORMS"] = "[Form] Load Forms";
+    FormActionType["LOAD_FORMS_SUCCESS"] = "[Form] Load Forms Success";
+    FormActionType["LOAD_FORMS_FAIL"] = "[Form] Load Forms Fail";
+    FormActionType["LOAD_FORM"] = "[Form] Load Form";
+    FormActionType["LOAD_FORM_SUCCESS"] = "[Form] Load Form Success";
+    FormActionType["LOAD_FORM_FAIL"] = "[Form] Load Form Fail";
+    FormActionType["CREATE_FORM"] = "[Form] Create Form";
+    FormActionType["CREATE_FORM_SUCCESS"] = "[Form] Create Form Success";
+    FormActionType["CREATE_FORM_FAIL"] = "[Form] Create Form Fail";
+    FormActionType["UPDATE_FORM"] = "[Form] Update Form";
+    FormActionType["UPDATE_FORM_SUCCESS"] = "[Form] Update Form Success";
+    FormActionType["UPDATE_FORM_FAIL"] = "[Form] Update Form Fail";
+    FormActionType["DELETE_FORM"] = "[Form] Delete Form";
+    FormActionType["DELETE_FORM_SUCCESS"] = "[Form] Delete Form Success";
+    FormActionType["DELETE_FORM_FAIL"] = "[Form] Delete Form Fail";
+})(FormActionType || (FormActionType = {}));
+var LoadForms = /** @class */ (function () {
+    function LoadForms() {
+        this.type = FormActionType.LOAD_FORMS;
+    }
+    return LoadForms;
+}());
+
+var LoadFormsSuccess = /** @class */ (function () {
+    function LoadFormsSuccess(payload) {
+        this.payload = payload;
+        this.type = FormActionType.LOAD_FORMS_SUCCESS;
+    }
+    LoadFormsSuccess.ctorParameters = function () { return [
+        { type: Array }
+    ]; };
+    return LoadFormsSuccess;
+}());
+
+var LoadFormsFail = /** @class */ (function () {
+    function LoadFormsFail(payload) {
+        this.payload = payload;
+        this.type = FormActionType.LOAD_FORMS_FAIL;
+    }
+    LoadFormsFail.ctorParameters = function () { return [
+        { type: String }
+    ]; };
+    return LoadFormsFail;
+}());
+
+var LoadForm = /** @class */ (function () {
+    function LoadForm(payload) {
+        this.payload = payload;
+        this.type = FormActionType.LOAD_FORM;
+    }
+    LoadForm.ctorParameters = function () { return [
+        { type: Number }
+    ]; };
+    return LoadForm;
+}());
+
+var LoadFormSuccess = /** @class */ (function () {
+    function LoadFormSuccess(payload) {
+        this.payload = payload;
+        this.type = FormActionType.LOAD_FORM_SUCCESS;
+    }
+    LoadFormSuccess.ctorParameters = function () { return [
+        { type: undefined }
+    ]; };
+    return LoadFormSuccess;
+}());
+
+var LoadFormFail = /** @class */ (function () {
+    function LoadFormFail(payload) {
+        this.payload = payload;
+        this.type = FormActionType.LOAD_FORM_FAIL;
+    }
+    LoadFormFail.ctorParameters = function () { return [
+        { type: String }
+    ]; };
+    return LoadFormFail;
+}());
+
+var CreateForm = /** @class */ (function () {
+    function CreateForm(payload) {
+        this.payload = payload;
+        this.type = FormActionType.CREATE_FORM;
+    }
+    CreateForm.ctorParameters = function () { return [
+        { type: undefined }
+    ]; };
+    return CreateForm;
+}());
+
+var CreateFormSuccess = /** @class */ (function () {
+    function CreateFormSuccess(payload) {
+        this.payload = payload;
+        this.type = FormActionType.CREATE_FORM_SUCCESS;
+    }
+    CreateFormSuccess.ctorParameters = function () { return [
+        { type: undefined }
+    ]; };
+    return CreateFormSuccess;
+}());
+
+var CreateFormFail = /** @class */ (function () {
+    function CreateFormFail(payload) {
+        this.payload = payload;
+        this.type = FormActionType.CREATE_FORM_FAIL;
+    }
+    CreateFormFail.ctorParameters = function () { return [
+        { type: String }
+    ]; };
+    return CreateFormFail;
+}());
+
+var UpdateForm = /** @class */ (function () {
+    function UpdateForm(payload) {
+        this.payload = payload;
+        this.type = FormActionType.UPDATE_FORM;
+    }
+    UpdateForm.ctorParameters = function () { return [
+        { type: undefined }
+    ]; };
+    return UpdateForm;
+}());
+
+var UpdateFormSuccess = /** @class */ (function () {
+    function UpdateFormSuccess(payload) {
+        this.payload = payload;
+        this.type = FormActionType.UPDATE_FORM_SUCCESS;
+    }
+    UpdateFormSuccess.ctorParameters = function () { return [
+        { type: undefined }
+    ]; };
+    return UpdateFormSuccess;
+}());
+
+var UpdateFormFail = /** @class */ (function () {
+    function UpdateFormFail(payload) {
+        this.payload = payload;
+        this.type = FormActionType.UPDATE_FORM_FAIL;
+    }
+    UpdateFormFail.ctorParameters = function () { return [
+        { type: String }
+    ]; };
+    return UpdateFormFail;
+}());
+
+var DeleteForm = /** @class */ (function () {
+    function DeleteForm(payload) {
+        this.payload = payload;
+        this.type = FormActionType.DELETE_FORM;
+    }
+    DeleteForm.ctorParameters = function () { return [
+        { type: Number }
+    ]; };
+    return DeleteForm;
+}());
+
+var DeleteFormSuccess = /** @class */ (function () {
+    function DeleteFormSuccess(payload) {
+        this.payload = payload;
+        this.type = FormActionType.DELETE_FORM_SUCCESS;
+    }
+    DeleteFormSuccess.ctorParameters = function () { return [
+        { type: Number }
+    ]; };
+    return DeleteFormSuccess;
+}());
+
+var DeleteFormFail = /** @class */ (function () {
+    function DeleteFormFail(payload) {
+        this.payload = payload;
+        this.type = FormActionType.DELETE_FORM_FAIL;
+    }
+    DeleteFormFail.ctorParameters = function () { return [
+        { type: String }
+    ]; };
+    return DeleteFormFail;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/store/effects/form.effects.ts":
+/*!*******************************************!*\
+  !*** ./src/store/effects/form.effects.ts ***!
+  \*******************************************/
+/*! exports provided: FormsEffect */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormsEffect", function() { return FormsEffect; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ngrx/effects */ "./node_modules/@ngrx/effects/fesm5/effects.js");
+/* harmony import */ var src_services_form_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/services/form.service */ "./src/services/form.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _actions_myform_action__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../actions/myform.action */ "./src/store/actions/myform.action.ts");
+
+
+
+
+
+
+
+var FormsEffect = /** @class */ (function () {
+    function FormsEffect(actions$, formService) {
+        var _this = this;
+        this.actions$ = actions$;
+        this.formService = formService;
+        this.loadForms$ = this.actions$.pipe(Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["ofType"])(_actions_myform_action__WEBPACK_IMPORTED_MODULE_6__["FormActionType"].LOAD_FORMS), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["mergeMap"])(function (actions) {
+            return _this.formService.getForm().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (forms) {
+                return new _actions_myform_action__WEBPACK_IMPORTED_MODULE_6__["LoadFormsSuccess"](forms);
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(function (err) { return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(new _actions_myform_action__WEBPACK_IMPORTED_MODULE_6__["LoadFormsFail"](err)); }));
+        }));
+        this.loadForm$ = this.actions$.pipe(Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["ofType"])(_actions_myform_action__WEBPACK_IMPORTED_MODULE_6__["FormActionType"].LOAD_FORM), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["mergeMap"])(function (action) {
+            return _this.formService.getFormById(action.payload).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (form) {
+                return new _actions_myform_action__WEBPACK_IMPORTED_MODULE_6__["LoadFormSuccess"](form);
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(function (err) { return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(new _actions_myform_action__WEBPACK_IMPORTED_MODULE_6__["LoadFormFail"](err)); }));
+        }));
+        this.createForm$ = this.actions$.pipe(Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["ofType"])(_actions_myform_action__WEBPACK_IMPORTED_MODULE_6__["FormActionType"].CREATE_FORM), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (action) { return action.payload; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["mergeMap"])(function (form) {
+            return _this.formService.createForm(form).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (newForm) {
+                return new _actions_myform_action__WEBPACK_IMPORTED_MODULE_6__["CreateFormSuccess"](newForm);
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(function (err) { return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(new _actions_myform_action__WEBPACK_IMPORTED_MODULE_6__["CreateFormFail"](err)); }));
+        }));
+        this.updateForm$ = this.actions$.pipe(Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["ofType"])(_actions_myform_action__WEBPACK_IMPORTED_MODULE_6__["FormActionType"].UPDATE_FORM), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (action) { return action.payload; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["mergeMap"])(function (form) {
+            return _this.formService.updateForm(form).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (updateForm) {
+                return new _actions_myform_action__WEBPACK_IMPORTED_MODULE_6__["UpdateFormSuccess"]({ id: updateForm.id,
+                    changes: updateForm
+                });
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(function (err) { return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(new _actions_myform_action__WEBPACK_IMPORTED_MODULE_6__["UpdateFormFail"](err)); }));
+        }));
+        this.deleteForm$ = this.actions$.pipe(Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["ofType"])(_actions_myform_action__WEBPACK_IMPORTED_MODULE_6__["FormActionType"].DELETE_FORM), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (action) { return action.payload; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["mergeMap"])(function (id) {
+            return _this.formService.deleteForm(id).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function () { return new _actions_myform_action__WEBPACK_IMPORTED_MODULE_6__["DeleteFormSuccess"](id); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(function (err) { return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(new _actions_myform_action__WEBPACK_IMPORTED_MODULE_6__["DeleteFormFail"](err)); }));
+        }));
+    }
+    FormsEffect.ctorParameters = function () { return [
+        { type: _ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["Actions"] },
+        { type: src_services_form_service__WEBPACK_IMPORTED_MODULE_3__["FormService"] }
+    ]; };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["Effect"])()
+    ], FormsEffect.prototype, "loadForms$", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["Effect"])()
+    ], FormsEffect.prototype, "loadForm$", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["Effect"])()
+    ], FormsEffect.prototype, "createForm$", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["Effect"])()
+    ], FormsEffect.prototype, "updateForm$", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["Effect"])()
+    ], FormsEffect.prototype, "deleteForm$", void 0);
+    FormsEffect = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
+    ], FormsEffect);
+    return FormsEffect;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/store/reducers/form.reducer.ts":
+/*!********************************************!*\
+  !*** ./src/store/reducers/form.reducer.ts ***!
+  \********************************************/
+/*! exports provided: formAdapter, defaultForm, initialState, formReducer, getForms, getFormsLoading, getFormsLoaded, getError, getCurrentFormId, getCurrentForm */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formAdapter", function() { return formAdapter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "defaultForm", function() { return defaultForm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initialState", function() { return initialState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formReducer", function() { return formReducer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getForms", function() { return getForms; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getFormsLoading", function() { return getFormsLoading; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getFormsLoaded", function() { return getFormsLoaded; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getError", function() { return getError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCurrentFormId", function() { return getCurrentFormId; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCurrentForm", function() { return getCurrentForm; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _actions_myform_action__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/myform.action */ "./src/store/actions/myform.action.ts");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var _ngrx_entity__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngrx/entity */ "./node_modules/@ngrx/entity/fesm5/entity.js");
+
+
+
+
+var formAdapter = Object(_ngrx_entity__WEBPACK_IMPORTED_MODULE_3__["createEntityAdapter"])();
+var defaultForm = {
+    ids: [],
+    entities: {},
+    selectedFormId: null,
+    loading: false,
+    loaded: false,
+    error: ''
+};
+var initialState = formAdapter.getInitialState(defaultForm);
+function formReducer(state, action) {
+    if (state === void 0) { state = initialState; }
+    switch (action.type) {
+        case _actions_myform_action__WEBPACK_IMPORTED_MODULE_1__["FormActionType"].LOAD_FORMS: {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, state, { loading: true });
+        }
+        case _actions_myform_action__WEBPACK_IMPORTED_MODULE_1__["FormActionType"].LOAD_FORMS_SUCCESS: {
+            return formAdapter.addAll(action.payload, tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, state, { loading: false, loaded: true }));
+        }
+        case _actions_myform_action__WEBPACK_IMPORTED_MODULE_1__["FormActionType"].LOAD_FORMS_FAIL: {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, state, { entities: {}, loading: false, loaded: true, error: action.payload });
+        }
+        case _actions_myform_action__WEBPACK_IMPORTED_MODULE_1__["FormActionType"].LOAD_FORMS: {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, state, { loading: true });
+        }
+        case _actions_myform_action__WEBPACK_IMPORTED_MODULE_1__["FormActionType"].LOAD_FORM_SUCCESS: {
+            return formAdapter.addOne(action.payload, tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, state, { selectedFormId: action.payload.id }));
+        }
+        case _actions_myform_action__WEBPACK_IMPORTED_MODULE_1__["FormActionType"].LOAD_FORM_FAIL: {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, state, { error: action.payload });
+        }
+        case _actions_myform_action__WEBPACK_IMPORTED_MODULE_1__["FormActionType"].CREATE_FORM_SUCCESS: {
+            return formAdapter.addOne(action.payload, state);
+        }
+        case _actions_myform_action__WEBPACK_IMPORTED_MODULE_1__["FormActionType"].CREATE_FORM_FAIL: {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, state, { error: action.payload });
+        }
+        case _actions_myform_action__WEBPACK_IMPORTED_MODULE_1__["FormActionType"].UPDATE_FORM_SUCCESS: {
+            return formAdapter.updateOne(action.payload, state);
+        }
+        case _actions_myform_action__WEBPACK_IMPORTED_MODULE_1__["FormActionType"].UPDATE_FORM_FAIL: {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, state, { error: action.payload });
+        }
+        case _actions_myform_action__WEBPACK_IMPORTED_MODULE_1__["FormActionType"].DELETE_FORM_SUCCESS: {
+            return formAdapter.removeOne(action.payload, state);
+        }
+        case _actions_myform_action__WEBPACK_IMPORTED_MODULE_1__["FormActionType"].DELETE_FORM_FAIL: {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, state, { error: action.payload });
+        }
+        default: {
+            return state;
+        }
+    }
+}
+var getFormFeatureState = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["createFeatureSelector"])('forms');
+var getForms = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["createSelector"])(getFormFeatureState, formAdapter.getSelectors().selectAll);
+var getFormsLoading = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["createSelector"])(getFormFeatureState, function (state) { return state.loading; });
+var getFormsLoaded = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["createSelector"])(getFormFeatureState, function (state) { return state.loaded; });
+var getError = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["createSelector"])(getFormFeatureState, function (state) { return state.error; });
+var getCurrentFormId = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["createSelector"])(getFormFeatureState, function (state) { return state.selectedFormId; });
+var getCurrentForm = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_2__["createSelector"])(getFormFeatureState, getCurrentFormId, function (state) { return state.entities[state.selectedFormId]; });
 
 
 /***/ }),
