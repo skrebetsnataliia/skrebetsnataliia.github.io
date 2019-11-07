@@ -344,7 +344,7 @@ let TaskComponent = class TaskComponent {
     delete() {
         this.taskServ.deleteTask(this.id).subscribe(res => {
             this.toastr.success('Task was deleted');
-            // window.location.reload();
+            window.location.reload();
         }, err => {
             this.error = err.message;
             this.toastr.error(`${this.error}`);
