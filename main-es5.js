@@ -361,7 +361,7 @@ var TaskComponent = /** @class */ (function () {
         });
     };
     TaskComponent.prototype.close = function () {
-        window.location.reload();
+        //window.location.reload();
         this.editTask = !this.editTask;
     };
     TaskComponent.prototype.sendTask = function (id) {

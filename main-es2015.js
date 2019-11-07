@@ -351,7 +351,7 @@ let TaskComponent = class TaskComponent {
         });
     }
     close() {
-        window.location.reload();
+        //window.location.reload();
         this.editTask = !this.editTask;
     }
     sendTask(id) {
