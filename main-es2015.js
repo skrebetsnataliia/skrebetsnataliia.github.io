@@ -369,8 +369,8 @@ let TaskComponent = class TaskComponent {
             };
             this.taskServ.createTask(Task).subscribe(res => {
                 this.toastr.success('Sent');
-                this.router.navigate(['/mytasks']);
-                window.location.reload();
+                //this.router.navigate(['/mytasks']);
+                //window.location.reload();
                 this.shareTask = true;
                 setTimeout(() => { this.shareTask = false; }, 3000);
             }, err => {

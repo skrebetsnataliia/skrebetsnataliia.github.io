@@ -380,8 +380,8 @@ var TaskComponent = /** @class */ (function () {
             };
             this.taskServ.createTask(Task).subscribe(function (res) {
                 _this.toastr.success('Sent');
-                _this.router.navigate(['/mytasks']);
-                window.location.reload();
+                //this.router.navigate(['/mytasks']);
+                //window.location.reload();
                 _this.shareTask = true;
                 setTimeout(function () { _this.shareTask = false; }, 3000);
             }, function (err) {
