@@ -354,7 +354,7 @@ var TaskComponent = /** @class */ (function () {
         var _this = this;
         this.taskServ.deleteTask(this.id).subscribe(function (res) {
             _this.toastr.success('Task was deleted');
-            window.location.reload();
+            // window.location.reload();
         }, function (err) {
             _this.error = err.message;
             _this.toastr.error("" + _this.error);
